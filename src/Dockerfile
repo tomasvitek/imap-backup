@@ -1,7 +1,7 @@
-FROM ruby:alpine
+FROM ruby:3.0
 
 # Install imap-backup
-RUN gem install 'imap-backup'
+RUN gem install 'imap-backup' --version 3.2.0
 
 # Make the data directory a volume
 VOLUME ["/root/.imap-backup"]
